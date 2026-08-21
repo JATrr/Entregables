@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(24, 199, 199);
+    background-color:rgb(27, 211, 211);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -8,10 +8,15 @@ body {
     margin: 0;
 }
 
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px #000080;
+}
+
 .card{
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgb(237, 0, 103);
+    box-shadow: 0 10px 25px rgb(237, 0, 103);
     padding: 30px;
     max-width: 400px;
     text-align: center;
