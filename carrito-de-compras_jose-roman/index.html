@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jose Angel T. Roman R.">
         <meta name="description" content="Es un diseño de un carrito de compras para una tienda de Zapatos, e-commerce">
-        <meta name="keywords" content="tacones, botas, zapatos, stilettos, plataformas de cuña">}
+        <meta name="keywords" content="tacones, botas, zapatos, stilettos, plataformas de cuña">
         <!--Es el título de la Página web-->
-        <title>Carrito de Compras - ZA´P</Prog></title>
+        <title>Carrito de Compras - ZA'P</title>
 
             <!--Es la conexión con la hoja de estilos-->
             <link rel="stylesheet" href="css/styles.css">
@@ -18,29 +18,157 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
     </head>
 
-<body class="body">
+<body class="paper-texture">
 
-    <header class="header">
+    <!-- ======Encabezado====== -->
+    <header class="site-header">
+
         <div class="container header-inner">
-            <a class="logo" href="#">
-
-                <!--Imagenm utilizada como Logo-->
-                <img src="img/logo.png" alt="Logo ZA´P">
-
-
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">👡</span>
+                ZA'P
             </a>
-            <a href="#" class="brand-name-link">
 
-                <span data-template-id="brand-name" class="canva-text title-font text-lg font-bold" style="color: rgb(63, 48, 42); font-weight: 700; font-style: normal; font-size: 16px;">
-                ZA´P</span>
-            
-            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Nuevos Lanzamientos</a></li>
+                    <li><a href="#oferta">Rebaja de Otoño</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#contacto">Marcas</a></li>
+                </ul>
+                <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en ZA´P.')">
+                    <i data-lucide="message-circle"></i> Pedir ahora
+                </button>
+            </nav>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
         </div>
-         
+
+        <nav id="mobile-menu" class="mobile-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Nuevos Lanzamientos</a></li>
+                <li><a href="#oferta">Rebaja de Otoño</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Marcas</a></li>
+            </ul>
+
+            <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en ZA´P.')">
+                    <i data-lucide="message-circle"></i> Pedir ahora
+            </button>
+        </nav> 
 
     </header>
 
-</body>
+    <main>
 
+         <!-- ================= HERO ================= -->
+        <section id="inicio" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text reveal">
+                    <p class="eyebrow">Detalles que hacen sonreír</p>
+                    <h1>Tu negocio merece estar en Internet</h1>
+                    <p class="lead">Promociona tus productos, recibe pedidos y haz que tus clientes te encuentren desde cualquier lugar.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#productos" class="btn primary">Ver productos</a>
+                        <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+                    </div>
+                    
+                    <p class="trust"><i data-lucide="heart"></i> Más de 200 detalles entregados</p>
+                </div>
+                
+                <div class="hero-image reveal">
+                    <img src="img/p14.jpg" alt="Botas de montar españolas en tono canela.">
+                    <span class="tag tag-love">Hecho con cariño</span>
+                    <span class="tag tag-custom">Pedidos personalizados</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRODUCTOS ================= -->
+        <section id="productos" class="products">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Calzado para cada ocasión</p>
+                    <h2>Conoce nuestros zapatos de temporada</h2>
+                    <p class="lead">Haz unico tu estilo.</p>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/14275701/pexels-photo-14275701.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caja de regalo rosa con listón y chocolates gourmet.">
+                            <div class="product-body">
+                            <span class="tag">Favorito</span>
+                            <h3>Caja Abrazo</h3>
+                            <p class="price">$349 MXN</p>
+                            <p class="description">Una selección dulce para regalar cariño en cualquier ocasión.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+                            </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/20179858/pexels-photo-20179858.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Velas artesanales en frascos de vidrio ámbar.">
+                            <div class="product-body">
+                            <span class="tag">Aromático</span>
+                            <h3>Vela Momento</h3>
+                            <p class="price">$189 MXN</p>
+                            <p class="description">Aroma suave y presentación artesanal para crear un momento especial.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+                            </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/7365132/pexels-photo-7365132.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Taza floral personalizada para regalo.">
+                            <div class="product-body">
+                            <span class="tag">Personalizable</span>
+                            <h3>Taza Personalizada</h3>
+                            <p class="price">$229 MXN</p>
+                            <p class="description">Tu frase, nombre o mensaje favorito en una taza hecha para sonreír.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+                            </div>
+                    </article>
+                    
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/2337804/pexels-photo-2337804.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Suculentas decorativas envueltas para regalo.">
+                            <div class="product-body">
+                            <span class="tag">Vida verde</span>
+                            <h3>Mini Jardín</h3>
+                            <p class="price">$279 MXN</p>
+                            <p class="description">Suculenta, maceta decorada y un detalle verde que dura.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+                            </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/7487417/pexels-photo-7487417.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Regalos y postres coloridos para celebración de cumpleaños.">
+                            <div class="product-body">
+                            <span class="tag">Para celebrar</span>
+                            <h3>Kit Cumpleaños</h3>
+                            <p class="price">$429 MXN</p>
+                            <p class="description">Todo listo para celebrar con dulzura, color y personalidad.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+                            </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <img src="https://images.pexels.com/photos/32589610/pexels-photo-32589610.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tarjetas elegantes decoradas con flores secas y lavanda.">
+                            <div class="product-body">
+                            <span class="tag">Pequeño gran detalle</span>
+                            <h3>Tarjeta con Flores</h3>
+                            <p class="price">$159 MXN</p>
+                            <p class="description">Un mensaje especial acompañado de flores secas y mucho encanto.</p>
+                            <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+                            </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
 
 </html>
